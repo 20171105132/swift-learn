@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swift learn/ViewController.swift"
+            timestampString = "560915737.138701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_learn.ViewController.flag.getter : Swift.Int"
+                  moduleName = "swift learn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171105132/Desktop/swift%20learn/swift%20learn/ViewController.swift"
+                  timestampString = "560914297.621937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_learn.ViewController.flag.setter : Swift.Int"
+                  moduleName = "swift learn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171105132/Desktop/swift%20learn/swift%20learn/ViewController.swift"
+                  timestampString = "560914297.6236629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_learn.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; swift_learn.ViewController"
+                  moduleName = "swift learn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171105132/Desktop/swift%20learn/swift%20learn/ViewController.swift"
+                  timestampString = "560914297.625375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swift_learn.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;swift_learn.ViewController&gt;"
+                  moduleName = "swift learn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s20171105132/Desktop/swift%20learn/swift%20learn/ViewController.swift"
+                  timestampString = "560914297.626942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
