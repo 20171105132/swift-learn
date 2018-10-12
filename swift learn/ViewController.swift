@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var temp=0.0
     var sum=0.0
     var flag=0
+    var sum1=0
     @IBOutlet weak var Caculator: UITextField!
     
     @IBAction func button1(_ sender: Any) {
@@ -48,6 +49,11 @@ class ViewController: UIViewController {
         Caculator.text=Caculator.text!+"0"
     }
     
+    @IBAction func ailquot(_ sender: Any) {
+        temp=Double(Caculator.text!)!
+        Caculator.text=""
+        flag=5
+    }
     @IBAction func add(_ sender: Any) {
         temp=Double(Caculator.text!)!
         Caculator.text=""
@@ -67,6 +73,9 @@ class ViewController: UIViewController {
         temp=Double(Caculator.text!)!
         Caculator.text=""
         flag=4
+        if(temp==0){
+            Caculator.text="error"
+        }
     }
     @IBAction func equal(_ sender: Any) {
         
@@ -83,8 +92,12 @@ class ViewController: UIViewController {
             Caculator.text!="\(sum)"
         }
         if(flag==4){
-            sum=temp/Double(Caculator.text!)!
+            sum=temp/(Double(Caculator.text!)!)
             Caculator.text!="\(sum)"
+        }
+        if(flag==5){
+            sum1=Int(temp/Double(Caculator.text!)!)
+            Caculator.text!="\(sum1)"
         }
     }
     @IBAction func button_clear(_ sender: Any) {
