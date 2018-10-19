@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     var sum1=0
     var i=0
     @IBOutlet weak var Caculator: UITextField!
-    
     @IBAction func button1(_ sender: Any) {
         Caculator.text=Caculator.text!+"1"
     }
@@ -54,27 +53,56 @@ class ViewController: UIViewController {
         temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
+            sum=temp
         }
         i=i+1
-        flag=1
         if(i==2){
-            sum=temp+Double(Caculator.text!)!
-            Caculator.text!="\(sum)"
+            sum=sum+Double(Caculator.text!)!
+            Caculator.text=""
         }
+        i=1
+        flag=1
     }
     @IBAction func Reduce(_ sender: Any) {
         temp=Double(Caculator.text!)!
-        Caculator.text=""
+        if(i==0){
+            Caculator.text=""
+            sum=temp
+        }
+        i=i+1
+        if(i==2){
+            sum=sum-Double(Caculator.text!)!
+            Caculator.text=""
+        }
+        i=1
         flag=2
     }
     @IBAction func Take(_ sender: Any) {
         temp=Double(Caculator.text!)!
-        Caculator.text=""
+        if(i==0){
+            Caculator.text=""
+            sum=temp
+        }
+        i=i+1
+        if(i==2){
+            sum=sum*Double(Caculator.text!)!
+            Caculator.text=""
+        }
+        i=1
         flag=3
     }
     @IBAction func division(_ sender: Any) {
         temp=Double(Caculator.text!)!
-        Caculator.text=""
+        if(i==0){
+            Caculator.text=""
+            sum=temp
+        }
+        i=i+1
+        if(i==2){
+            sum=sum/(Double(Caculator.text!)!)
+            Caculator.text=""
+        }
+        i=1
         flag=4
         if(temp==0){
             Caculator.text="error"
@@ -88,20 +116,28 @@ class ViewController: UIViewController {
     @IBAction func equal(_ sender: Any) {
         
         if(flag==1){
-            sum=temp+Double(Caculator.text!)!
+            sum=sum+Double(Caculator.text!)!
             Caculator.text!="\(sum)"
+            i=0
+            sum=0
         }
         if(flag==2){
-            sum=temp-Double(Caculator.text!)!
+            sum=sum-Double(Caculator.text!)!
             Caculator.text!="\(sum)"
+            i=0
+            sum=0
         }
         if(flag==3){
-            sum=temp*Double(Caculator.text!)!
+            sum=sum*Double(Caculator.text!)!
             Caculator.text!="\(sum)"
+            i=0
+            sum=0
         }
         if(flag==4){
-            sum=temp/(Double(Caculator.text!)!)
+            sum=sum/(Double(Caculator.text!)!)
             Caculator.text!="\(sum)"
+            i=0
+            sum=0
         }
         if(flag==5){
             sum1=Int(temp/Double(Caculator.text!)!)
@@ -110,6 +146,7 @@ class ViewController: UIViewController {
     }
     @IBAction func button_clear(_ sender: Any) {
         Caculator.text=""
+        sum=0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
