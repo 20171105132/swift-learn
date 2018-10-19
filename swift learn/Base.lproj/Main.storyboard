@@ -215,15 +215,15 @@
                                     <action selector="button0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2A-kw-la3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlI-n0-D5H">
-                                <rect key="frame" x="25" y="125" width="30" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivG-sZ-J1v">
+                                <rect key="frame" x="19" y="125" width="42" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="%">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+/-">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="ailquot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDr-JF-Onq"/>
+                                    <action selector="mins_sign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjV-oY-344"/>
                                 </connections>
                             </button>
                         </subviews>

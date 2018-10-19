@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var flag=0
     var sum1=0
     var i=0
+    var point=1
     @IBOutlet weak var Caculator: UITextField!
     @IBAction func button1(_ sender: Any) {
         Caculator.text=Caculator.text!+"1"
@@ -44,11 +45,15 @@ class ViewController: UIViewController {
     }
     @IBAction func button10(_ sender: Any) {
         Caculator.text=Caculator.text!+"."
+        point=0
     }
     @IBAction func button0(_ sender: Any) {
         Caculator.text=Caculator.text!+"0"
     }
     
+    @IBAction func mins_sign(_ sender: Any) {
+        Caculator.text!="-"
+    }
     @IBAction func add(_ sender: Any) {
         temp=Double(Caculator.text!)!
         if(i==0){
@@ -108,45 +113,63 @@ class ViewController: UIViewController {
             Caculator.text="error"
         }
     }
-    @IBAction func ailquot(_ sender: Any) {
-        temp=Double(Caculator.text!)!
-        Caculator.text=""
-        flag=5
-    }
+
     @IBAction func equal(_ sender: Any) {
         
-        if(flag==1){
+        if((flag==1)&&(point==0)){
             sum=sum+Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if(flag==2){
+        if((flag==2)&&(point==0)){
             sum=sum-Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if(flag==3){
+        if((flag==3)&&(point==0)){
             sum=sum*Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if(flag==4){
+        if((flag==4)&&(point==0)){
             sum=sum/(Double(Caculator.text!)!)
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if(flag==5){
-            sum1=Int(temp/Double(Caculator.text!)!)
+        if((flag==1)&&(point==1)){
+            sum1=Int(sum+Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
+            i=0
+            sum1=0
         }
+        if((flag==2)&&(point==1)){
+            sum1=Int(sum-Double(Caculator.text!)!)
+            Caculator.text!="\(sum1)"
+            i=0
+            sum1=0
+        }
+        if((flag==3)&&(point==1)){
+            sum1=Int(sum*Double(Caculator.text!)!)
+            Caculator.text!="\(sum1)"
+            i=0
+            sum1=0
+        }
+        if((flag==4)&&(point==1)){
+            sum1=Int(sum/Double(Caculator.text!)!)
+            Caculator.text!="\(sum1)"
+            i=0
+            sum1=0
+        }
+        
     }
     @IBAction func button_clear(_ sender: Any) {
         Caculator.text=""
         sum=0
+        sum1=0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
