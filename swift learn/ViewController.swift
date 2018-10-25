@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     var flag=0
     var sum1=0
     var i=0
-    var point=1
+    var point=false  //判断小数点是否存在
     @IBOutlet weak var Caculator: UITextField!
+    
     @IBAction func button1(_ sender: Any) {
         Caculator.text=Caculator.text!+"1"
     }
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
     }
     @IBAction func button10(_ sender: Any) {
         Caculator.text=Caculator.text!+"."
-        point=0
+        point=true
     }
     @IBAction func button0(_ sender: Any) {
         Caculator.text=Caculator.text!+"0"
@@ -62,7 +63,14 @@ class ViewController: UIViewController {
         }
         i=i+1
         if(i==2){
-            sum=sum+Double(Caculator.text!)!
+            if(flag==1)
+            {
+                sum=sum+temp
+            }
+            if(flag==2)
+            {
+                sum=sum-temp
+            }
             Caculator.text=""
         }
         i=1
@@ -76,7 +84,14 @@ class ViewController: UIViewController {
         }
         i=i+1
         if(i==2){
-            sum=sum-Double(Caculator.text!)!
+            if(flag==1)
+            {
+                sum=sum+temp
+            }
+            if(flag==2)
+            {
+                sum=sum-temp
+            }
             Caculator.text=""
         }
         i=1
@@ -116,49 +131,49 @@ class ViewController: UIViewController {
 
     @IBAction func equal(_ sender: Any) {
         
-        if((flag==1)&&(point==0)){
+        if flag==1&&point==true {
             sum=sum+Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if((flag==2)&&(point==0)){
+        if  flag==2&&point==true{
             sum=sum-Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if((flag==3)&&(point==0)){
+        if  flag==3&&point==true{
             sum=sum*Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if((flag==4)&&(point==0)){
+        if  flag==4&&point==true{
             sum=sum/(Double(Caculator.text!)!)
             Caculator.text!="\(sum)"
             i=0
             sum=0
         }
-        if((flag==1)&&(point==1)){
+        if  flag==1&&point==false{
             sum1=Int(sum+Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
             i=0
             sum1=0
         }
-        if((flag==2)&&(point==1)){
+        if  flag==2&&point==false{
             sum1=Int(sum-Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
             i=0
             sum1=0
         }
-        if((flag==3)&&(point==1)){
+        if  flag==3&&point==false{
             sum1=Int(sum*Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
             i=0
             sum1=0
         }
-        if((flag==4)&&(point==1)){
+        if  flag==4&&point==false{
             sum1=Int(sum/Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
             i=0
@@ -170,6 +185,7 @@ class ViewController: UIViewController {
         Caculator.text=""
         sum=0
         sum1=0
+        point=false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
