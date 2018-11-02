@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     var sum1=0
     var i=0
     var point=false  //判断小数点是否存在
-    var caflag=1
+    var caflag=0    //判断数前面是符号还是数字
     @IBOutlet weak var Caculator: UITextField!
-    
+   
     @IBAction func button1(_ sender: Any) {
         if(caflag==1){
             Caculator.text=Caculator.text!+"1"
@@ -107,6 +107,10 @@ class ViewController: UIViewController {
         Caculator.text!="-"
     }
     @IBAction func add(_ sender: Any) {
+        if(caflag==0)
+        {
+            Caculator.text="0"
+        }
         temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
@@ -128,9 +132,12 @@ class ViewController: UIViewController {
         }
         i=1
         flag=1
-        caflag=0
     }
     @IBAction func Reduce(_ sender: Any) {
+        if(caflag==0)
+        {
+            Caculator.text="0"
+        }
         temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
@@ -150,9 +157,12 @@ class ViewController: UIViewController {
         }
         i=1
         flag=2
-        caflag=0
     }
     @IBAction func Take(_ sender: Any) {
+        if(caflag==0)
+        {
+            Caculator.text="0"
+        }
          temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
@@ -163,12 +173,14 @@ class ViewController: UIViewController {
             sum=sum*Double(Caculator.text!)!
             Caculator.text=""
         }
-        temp=Double(Caculator.text!)!
         i=1
         flag=3
-        caflag=0
     }
     @IBAction func division(_ sender: Any) {
+        if(caflag==0)
+        {
+            Caculator.text="0"
+        }
         temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
@@ -181,15 +193,16 @@ class ViewController: UIViewController {
         }
         i=1
         flag=4
-        caflag=0
         if(temp==0){
-            Caculator.text="error"
+            Caculator.text=""
         }
     }
 
     @IBAction func equal(_ sender: Any) {
-        caflag=0
-        if flag==1&&point==true {
+        if caflag==0{
+            Caculator.text="0"
+        }
+        if flag==1&&point==true{
             sum=sum+Double(Caculator.text!)!
             Caculator.text!="\(sum)"
             i=0
@@ -231,13 +244,13 @@ class ViewController: UIViewController {
             i=0
             sum1=0
         }
-        if  flag==4&&point==false{
+        /*if  flag==4&&point==false{
             sum1=Int(sum/Double(Caculator.text!)!)
             Caculator.text!="\(sum1)"
             i=0
             sum1=0
-        }
-        
+        }*/
+         caflag=0
     }
     @IBAction func button_clear(_ sender: Any) {
         Caculator.text=""
