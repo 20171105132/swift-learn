@@ -106,6 +106,7 @@ class ViewController: UIViewController {
     @IBAction func mins_sign(_ sender: Any) {
         Caculator.text!="-"
     }
+    
     @IBAction func add(_ sender: Any) {
         if(caflag==0)
         {
@@ -133,6 +134,7 @@ class ViewController: UIViewController {
         i=1
         flag=1
     }
+    
     @IBAction func Reduce(_ sender: Any) {
         if(caflag==0)
         {
@@ -158,6 +160,7 @@ class ViewController: UIViewController {
         i=1
         flag=2
     }
+    
     @IBAction func Take(_ sender: Any) {
         if(caflag==0)
         {
@@ -176,6 +179,7 @@ class ViewController: UIViewController {
         i=1
         flag=3
     }
+    
     @IBAction func division(_ sender: Any) {
         if(caflag==0)
         {
@@ -194,7 +198,7 @@ class ViewController: UIViewController {
         i=1
         flag=4
         if(temp==0){
-            Caculator.text=""
+            Caculator.text="error"
         }
     }
 
@@ -258,6 +262,8 @@ class ViewController: UIViewController {
         sum1=0
         point=false
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
