@@ -152,6 +152,7 @@ class ViewController: UIViewController {
             Caculator.text="0"
             display.text="0"
         }
+        
         temp=Double(Caculator.text!)!
         if(i==0){
             Caculator.text=""
@@ -170,6 +171,18 @@ class ViewController: UIViewController {
             if(flag==2)
             {
                 sum=sum-temp
+                Caculator.text=""
+                display.text=display.text!+"+"
+            }
+            if(flag==3)
+            {
+                sum=sum*temp
+                Caculator.text=""
+                display.text=display.text!+"+"
+            }
+            if(flag==4)
+            {
+                sum=sum/temp
                 Caculator.text=""
                 display.text=display.text!+"+"
             }
@@ -205,6 +218,18 @@ class ViewController: UIViewController {
                 Caculator.text=""
                 display.text=display.text!+"-"
             }
+            if(flag==3)
+            {
+                sum=sum*temp
+                Caculator.text=""
+                display.text=display.text!+"-"
+            }
+            if(flag==4)
+            {
+                sum=sum/temp
+                Caculator.text=""
+                display.text=display.text!+"-"
+            }
             Caculator.text=""
         }
         i=1
@@ -225,7 +250,7 @@ class ViewController: UIViewController {
         }
         i=i+1
         if(i==2){
-            sum=sum*Double(Caculator.text!)!
+            sum=sum*temp
             Caculator.text=""
             display.text=display.text!+"*"
         }
@@ -247,7 +272,7 @@ class ViewController: UIViewController {
         }
         i=i+1
         if(i==2){
-            sum=sum/(Double(Caculator.text!)!)
+            sum=sum/temp
             display.text=display.text!+"/"
             Caculator.text=""
         }
